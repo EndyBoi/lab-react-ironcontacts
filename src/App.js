@@ -25,7 +25,7 @@ class App extends React.Component {
 		let tempContacts = [...this.state.contacts]
 		let tempContact = tempContacts.splice(randomIndex, 1)
 		let tempContactList = [...this.state.contactList]
-		tempContactList.push(tempContact[0])
+		tempContactList.unshift(tempContact[0])
 		this.setState({
 			contacts: tempContacts,
 			contactList: tempContactList,
